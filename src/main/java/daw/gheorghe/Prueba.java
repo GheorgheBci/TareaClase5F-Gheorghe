@@ -17,5 +17,7 @@ public class Prueba {
         System.out.println("La suma total de la columna es: " + cm1.sumarColumna(1));
         
         System.out.println("La suma total de la diagonal principal es: " + cm1.sumarDiagonalPrincipal());
+        
+        System.out.println("La suma total de la diagonal secundaria es: " + cm1.sumarDiagonalSecundaria());
     }
 }

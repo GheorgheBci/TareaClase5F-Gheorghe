@@ -60,4 +60,17 @@ public class CuadradoMagico {
 
         return acumulador;
     }
+
+    public int sumarDiagonalSecundaria() {
+        int acumulador = 0;
+
+        int contador = 2;
+
+        for (int i = 0; i < matrizMagico.length; i++) {
+            acumulador += matrizMagico[i][contador];
+            contador--;
+        }
+
+        return acumulador;
+    }
 }
