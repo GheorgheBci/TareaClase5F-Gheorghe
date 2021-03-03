@@ -75,10 +75,27 @@ public class CuadradoMagico {
     }
 
     public boolean esCuadradoMagico() {
-        if (sumarFila(0) == sumarColumna(0) & sumarDiagonalPrincipal() == sumarDiagonalSecundaria()) {
-            return true;
-        } else {
-            return false;
+
+        boolean si = true;
+
+        for (int i = 0; i < matrizMagico.length; i++) {
+            for (int j = 0; j < matrizMagico[i].length; j++) {
+
+                if ((sumarFila(i) == sumarColumna(j))) {
+
+                    if (sumarFila(i) == sumarDiagonalPrincipal()) {
+
+                        if (sumarDiagonalPrincipal() == sumarDiagonalSecundaria()) {
+                            si = true;
+                        }
+                    }
+                    
+                } else {
+                    si = false;
+                }
+            }
         }
+
+        return si;
     }
 }
