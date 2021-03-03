@@ -46,7 +46,16 @@ public class CuadradoMagico {
 
         for (int j = 0; j < matrizMagico.length; j++) {
             acumulador += matrizMagico[j][columna];
+        }
 
+        return acumulador;
+    }
+
+    public int sumarDiagonalPrincipal() {
+        int acumulador = 0;
+
+        for (int j = 0; j < matrizMagico.length; j++) {
+            acumulador += matrizMagico[j][j];
         }
 
         return acumulador;
