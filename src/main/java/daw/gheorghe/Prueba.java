@@ -19,5 +19,7 @@ public class Prueba {
         System.out.println("La suma total de la diagonal principal es: " + cm1.sumarDiagonalPrincipal());
         
         System.out.println("La suma total de la diagonal secundaria es: " + cm1.sumarDiagonalSecundaria());
+        
+        System.out.println("¿Es un cuadrado mágico? " + cm1.esCuadradoMagico());
     }
 }

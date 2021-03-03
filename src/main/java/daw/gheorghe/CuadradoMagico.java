@@ -73,4 +73,12 @@ public class CuadradoMagico {
 
         return acumulador;
     }
+
+    public boolean esCuadradoMagico() {
+        if (sumarFila(0) == sumarColumna(0) & sumarDiagonalPrincipal() == sumarDiagonalSecundaria()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
