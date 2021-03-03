@@ -12,6 +12,7 @@ public class CuadradoMagico {
 
     private int[][] matrizMagico;
 
+    // Constructor que inicializa la matriz con valores aleatorios entre 1 y 9
     public CuadradoMagico() {
         this.matrizMagico = new int[3][3];
 
@@ -22,6 +23,7 @@ public class CuadradoMagico {
         }
     }
 
+    // Método que imprime el contenido de la matriz
     public void imprimirMatriz() {
         for (int i = 0; i < matrizMagico.length; i++) {
             for (int j = 0; j < matrizMagico[i].length; j++) {
@@ -31,6 +33,7 @@ public class CuadradoMagico {
         }
     }
 
+    // Método que suma la fila de la matriz que indiquemos por parametros
     public int sumarFila(int fila) {
         int acumulador = 0;
 
@@ -41,6 +44,7 @@ public class CuadradoMagico {
         return acumulador;
     }
 
+    // Método que suma la columna de la matriz que indiquemos por parametros
     public int sumarColumna(int columna) {
         int acumulador = 0;
 
@@ -51,6 +55,7 @@ public class CuadradoMagico {
         return acumulador;
     }
 
+    // Método que suma la primera diagonal de la matriz
     public int sumarDiagonalPrincipal() {
         int acumulador = 0;
 
@@ -61,6 +66,7 @@ public class CuadradoMagico {
         return acumulador;
     }
 
+    // Método que suma la segunda diagonal de la matriz
     public int sumarDiagonalSecundaria() {
         int acumulador = 0;
 
@@ -74,23 +80,27 @@ public class CuadradoMagico {
         return acumulador;
     }
 
+    // Método para saber si el cuadrado es mágico
     public boolean esCuadradoMagico() {
 
         boolean si = true;
 
+        // Mediante dos bucles for vamos viendo si el resultado de la suma de una fila es igual al resultado de la suma de una columna
         for (int i = 0; i < matrizMagico.length; i++) {
             for (int j = 0; j < matrizMagico[i].length; j++) {
 
                 if ((sumarFila(i) == sumarColumna(j))) {
 
+                    // Si la primera condición se cumple pasamos a comparar el resultado de sumar la diagonal principal
                     if (sumarFila(i) == sumarDiagonalPrincipal()) {
 
+                        // Si se cumple la condición comparamos con el resultado de sumar la diagonal secundaria
                         if (sumarDiagonalPrincipal() == sumarDiagonalSecundaria()) {
                             si = true;
                         }
                     }
-                    
-                } else {
+
+                } else { // Si no se cumple la primera condición devolvera un false
                     si = false;
                 }
             }
