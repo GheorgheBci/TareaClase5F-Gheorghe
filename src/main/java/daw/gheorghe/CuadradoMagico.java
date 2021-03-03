@@ -21,4 +21,13 @@ public class CuadradoMagico {
             }
         }
     }
+
+    public void imprimirMatriz() {
+        for (int i = 0; i < matrizMagico.length; i++) {
+            for (int j = 0; j < matrizMagico[i].length; j++) {
+                System.out.print(matrizMagico[i][j] + " ");
+            }
+            System.out.println("");
+        }
+    }
 }
