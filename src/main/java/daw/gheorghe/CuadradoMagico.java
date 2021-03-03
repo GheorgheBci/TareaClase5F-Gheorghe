@@ -30,14 +30,25 @@ public class CuadradoMagico {
             System.out.println("");
         }
     }
-    
-    public int sumarFila(int fila){
+
+    public int sumarFila(int fila) {
         int acumulador = 0;
-        
+
         for (int i = 0; i < matrizMagico[fila].length; i++) {
             acumulador += matrizMagico[fila][i];
         }
-        
+
+        return acumulador;
+    }
+
+    public int sumarColumna(int columna) {
+        int acumulador = 0;
+
+        for (int j = 0; j < matrizMagico.length; j++) {
+            acumulador += matrizMagico[j][columna];
+
+        }
+
         return acumulador;
     }
 }
