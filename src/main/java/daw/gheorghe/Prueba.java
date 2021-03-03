@@ -11,5 +11,7 @@ public class Prueba {
         CuadradoMagico cm1 = new CuadradoMagico();
 
         cm1.imprimirMatriz();
+        
+        System.out.println("La suma total es: " + cm1.sumarFila(2));
     }
 }
